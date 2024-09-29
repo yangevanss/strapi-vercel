@@ -1,0 +1,15 @@
+services:
+  db:
+    container_name: strapi-vercel-postgres
+    image: postgres:15.8-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: $DATABASE_NAME
+      POSTGRES_USER: $DATABASE_USERNAME
+      POSTGRES_PASSWORD: $DATABASE_PASSWORD
+    ports:
+      - $DATABASE_PORT:$DATABASE_PORT
+
+volumes:
+  postgres-data:
