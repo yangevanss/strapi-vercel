@@ -1,9 +1,7 @@
-try { 
-  console.log(123)
+const strapi = require("@strapi/strapi");
   
-  const strapi = require("@strapi/strapi");
-  
-  strapi.createStrapi({ distDir: "./dist" }).start();
-}catch(e){
-  console.log(e);
-}
+const app = strapi.createStrapi({ distDir: "./dist" })
+
+app.start();
+
+module.exports = app;
