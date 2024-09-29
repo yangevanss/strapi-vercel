@@ -7,14 +7,10 @@
 // module.exports = app;
 module.exports = () => {
   try {
-    console.log(123);
-    
     const strapi = require("@strapi/strapi");
 
-    console.log('strapi:', strapi);
-    
+    strapi.createStrapi({ distDir: "./dist" }).start();
   }catch(e){
-    console.log(e);
-    
+    console.log('error:', e);
   }
 }
