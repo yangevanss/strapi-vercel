@@ -1,1 +1,4 @@
-console.log(123)
+module.exports = () => {
+  console.log(123);
+  
+}
